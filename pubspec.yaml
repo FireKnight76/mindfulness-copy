@@ -1,0 +1,47 @@
+name: mindfulness_in_je_broekzak
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.1
+
+dependencies:
+  firebase_core: ^3.8.1
+  firebase_messaging: ^15.1.6
+  firebase_analytics: ^11.3.6
+  flutter:
+    sdk: flutter
+  http: ^1.2.2
+  video_player: ^2.5.1 # Ensure this is compatible with your Flutter SDK version
+  chewie: ^1.9.2 #dependency for video UI
+  video_player_web: ^2.3.3
+
+  #plays audio
+  audioplayers: ^6.1.0
+
+  # pick audio file
+  file_picker: ^8.1.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  mockito: ^5.4.4
+  build_runner: ^2.4.13
+
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/audio/test_file.mp3
+    - assets/audio/test_file2.mp3
+    - assets/mindful.png
+    - assets/info.png
+    - assets/jungle-bg.webp
+    - assets/sea.mp4
+    - assets/MindfulBewegen.mp4
+    - assets/ZintuigenWandeling.mp4
+
+
+
