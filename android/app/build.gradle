@@ -1,0 +1,54 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services'
+    // END: FlutterFire Configuration
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.mindfulness_in_je_broekzak"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = "27.0.12077973"
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    defaultConfig {
+        // Specify your unique Application ID
+        applicationId = "com.example.mindfulness_in_je_broekzak"
+
+        // Minimum and target SDK versions
+        minSdk = flutter.minSdkVersion
+        targetSdk = 34 // Lowered targetSdk version to 33
+
+        // Flutter-provided versioning
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Currently using the debug signing config to allow `flutter run --release`.
+            signingConfig = signingConfigs.debug
+            // Enable code shrinking and obfuscation in release builds
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildToolsVersion = "34.0.0" // Matches compileSdk version
+}
+
+flutter {
+    source = "../.."
+} 
